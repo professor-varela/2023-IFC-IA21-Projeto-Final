@@ -1,5 +1,16 @@
+import { styled } from "styled-components"
+
+const Header = styled.header`
+    color: red;
+    
+    span {
+        color: green;
+    }
+`
+
 export default () => <>
-    <header>
+    <Header>
         Header  
-    </header>
+        <span>teste</span>
+    </Header>
 </>
