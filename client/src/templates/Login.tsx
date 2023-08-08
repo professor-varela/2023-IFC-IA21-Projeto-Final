@@ -1,78 +1,34 @@
-import { styled } from "styled-components"
+import { styled } from "styled-components";
+import LoginForm from "../components/LoginForm";
 
 const Container = styled.div`
-    display: flex;
+    background-color: #435865;
     height: 100vh;
+    display: grid;
+    place-content: center;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: " ";
+        background-color: #243238;
+        width: 90%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        transform: skew(15deg) translateX(50%);
+        box-shadow: -2px -2px 5px #000000;
+    }
 
     > * {
-        flex-grow: 1
-    }
-
-    .image {
-        background-color: #9bc9b6;
-        color: #FFFFFF
-    }
-
-    .container-login-form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        form {
-            font-size: 1.5rem;
-            padding: 2rem;
-
-            div {
-                margin-bottom: 1rem;
-
-                label {
-                    display: block;
-                    color: #5b5b5b;
-                }
-
-                input {
-                    font-size: 1.5rem;
-                    padding: .5rem;
-                    border: 0 none;
-                    border-bottom: 1px solid black;
-                    outline: none;
-                }
-
-                button {
-                    border: 0 none;
-                    border-radius: 12px;
-                    padding: .5rem;
-                    font-size: 1.25rem;
-                    background: #5e5e5e;
-                    color: #FFFFFF;
-                }
-            }
-        }
+        position: relative;
+        z-index: 9;
     }
 `
 
-
 export default () => <>
     <Container>
-        <div className="image">
-            ...
-        </div>
-        <div className="container-login-form">
-            <form>
-                <div>
-                    <label>Login</label>
-                    <input name="login" />
-                </div>
-                <div>
-                    <label>Senha</label>
-                    <input type="password" name="password" />
-                </div>
-                <div>
-                    <button>entrar</button>
-                    <button>recuperar senha</button>
-                </div>
-            </form>
-        </div>
+        <LoginForm />
     </Container>
 </>
