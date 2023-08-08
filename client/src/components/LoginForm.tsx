@@ -44,7 +44,7 @@ const MyForm = styled.form`
 
             label {
                 display: block;
-                font-size: 40%;
+                font-size: 50%;
             }
 
             input {
@@ -70,6 +70,7 @@ const MyForm = styled.form`
         background-color: #f3f3f3;
         padding: 2rem;
         color: #a4a4a4;
+        font-size: 90%;
 
         a {
             color: #ec017e;
