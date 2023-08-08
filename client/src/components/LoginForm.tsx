@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { styled } from "styled-components"
 
 const MyForm = styled.form`
@@ -121,7 +122,7 @@ export default () => <>
             </div>
         </div>
         <div className="sign-up">
-            é a sua primeira vez aqui, <a href="#">cadastre-se!</a>
+            é a sua primeira vez aqui, <Link to="/signup">cadastre-se!</Link>
         </div>
     </MyForm>
 </>
